@@ -16,7 +16,7 @@ function String(value) {
      */
     this.set = function (string) {
         this.value = string;
-    }
+    };
 
     /**
      * Returns the String value of this object.
@@ -24,7 +24,7 @@ function String(value) {
      */
     this.get = function () {
         return this.value;
-    }
+    };
 
     /**
      * Returns the character at the given position.
@@ -32,7 +32,7 @@ function String(value) {
      */
     this.charAt = function (position) {
         return this.charAt(position);
-    }
+    };
 
     /**
      * Retruns the String value concatenated with the given string.
@@ -41,7 +41,7 @@ function String(value) {
      */
     this.append = function (string) {
         return (this.value + string);
-    }
+    };
 
     /**
      * Returns String value prepended by given string.
@@ -50,7 +50,7 @@ function String(value) {
      */
     this.prepend = function (string) {
         return (string + this.value);
-    }
+    };
 
     /**
      * Retunrs the String value wrapped around with given string.
@@ -59,7 +59,7 @@ function String(value) {
      */
     this.wrapWith = function (string) {
         return (string + this.value + string);
-    }
+    };
 
     /**
      * Checks if String equals the given object.
@@ -67,12 +67,8 @@ function String(value) {
      * @returns {boolean}
      */
     this.equals = function (String) {
-        if(this === String){
-            return true;
-        }else {
-            return false;
-        }
-    }
+        return this === String;
+    };
 
     /**
      * Checks if the content is the same.
@@ -80,12 +76,8 @@ function String(value) {
      * @returns {boolean}
      */
     this.contentEquals = function (string) {
-        if(this.value == string){
-            return true;
-        }else {
-            return false;
-        }
-    }
+        return this.value.equals(string);
+    };
 
     /**
      * Returns String as a lower case representation.
@@ -93,7 +85,7 @@ function String(value) {
      */
     this.toLowerCase = function () {
         return this.value.toLowerCase();
-    }
+    };
 
     /**
      * Returns String as a upper case representation.
@@ -101,7 +93,7 @@ function String(value) {
      */
     this.toUpperCase = function () {
         return this.value.toUpperCase();
-    }
+    };
 
     /**
      * Returns the length of the String value.
@@ -109,7 +101,7 @@ function String(value) {
      */
     this.length = function () {
         return this.value.length;
-    }
+    };
 
     /**
      * Retruns the number of the first occurency of the given character.
@@ -119,7 +111,7 @@ function String(value) {
      */
     this.firstIndexOf = function (char) {
         return this.value.indexOf(char);
-    }
+    };
 
     /**
      * Retruns the number of the first occurency of the given character.
@@ -129,7 +121,7 @@ function String(value) {
      */
     this.lastIndexOf = function (char) {
         return this.value.lastIndexOf(char);
-    }
+    };
 
     /**
      * Conerts String value to char array.
@@ -142,7 +134,7 @@ function String(value) {
             array[i] = this.value.charAt(i);
         }
         return array;
-    }
+    };
 
     /**
      * Returns the unicode character code of given character.
@@ -150,42 +142,42 @@ function String(value) {
      */
     this.codePoint = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.contains = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.valueOf = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.endsWith = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.startsWith = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.format = function () {
 
-    }
+    };
 
     /**
      *
@@ -193,14 +185,14 @@ function String(value) {
      */
     this.getChars = function (from,till) {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.indexOf = function (String) {
 
-    }
+    };
 
     /**
      *
@@ -208,14 +200,14 @@ function String(value) {
      */
     this.matchesRegions = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.hashCode = function () {
 
-    }
+    };
 
     /**
      * first occurency
@@ -223,7 +215,7 @@ function String(value) {
      */
     this.replace = function () {
 
-    }
+    };
 
     /**
      * all occurencies
@@ -231,26 +223,26 @@ function String(value) {
      */
     this.replaceAll = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.split = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.subString = function () {
 
-    }
+    };
 
     /**
      * todo:implement
      */
     this.trim = function () {
 
-    }
+    };
 }
