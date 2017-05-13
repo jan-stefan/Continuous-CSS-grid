@@ -54,15 +54,6 @@ var de;
                 };
                 ;
                 /**
-                 * Returns the length of the JGString value.
-                 * @returns {Number|number}
-                 */
-                JGString.prototype.length = function () {
-                    this.value = this.value.length.toString();
-                    return this;
-                };
-                ;
-                /**
                  * Concatenates the JGString value with the given string.
                  * @param string
                  * @returns {*}
@@ -96,7 +87,7 @@ var de;
                  * Returns the length of the JGString value and marks the end of the fluent style chain.
                  * @return {number}
                  */
-                JGString.prototype.lengthGet = function () {
+                JGString.prototype.length = function () {
                     return this.value.length;
                 };
                 /**
@@ -104,7 +95,7 @@ var de;
                  * @param JGString
                  * @returns {boolean}
                  */
-                JGString.prototype.equalsGet = function (JGString) {
+                JGString.prototype.equalsObject = function (JGString) {
                     return this === JGString;
                 };
                 ;
@@ -113,7 +104,7 @@ var de;
                  * @param string
                  * @returns {boolean}
                  */
-                JGString.prototype.contentEqualsGet = function (string) {
+                JGString.prototype.contentEquals = function (string) {
                     return (this.value == string);
                 };
                 ;
@@ -133,6 +124,52 @@ var de;
                 JGString.prototype.toUpperCase = function () {
                     this.value = this.value.toUpperCase();
                     return this;
+                };
+                ;
+                /**
+                 * Retruns the number of the first occurency of the given character and left the fluent style chain.
+                 * Note that this function is case sensitive.
+                 * @param char
+                 * @returns {Number|number}
+                 */
+                JGString.prototype.firstIndexOf = function (char) {
+                    return this.value.indexOf(char);
+                };
+                ;
+                /**
+                 * Retruns the number of the first occurency of the given character and left the fluent style chain.
+                 * Note that this function is case sensitive.
+                 * @param char
+                 * @return {Number|number}
+                 */
+                JGString.prototype.lastIndexOf = function (char) {
+                    return this.value.lastIndexOf(char);
+                };
+                ;
+                /**
+                 * Converts JGString value to char array and left fluent style chain.
+                 * @return {Array}
+                 */
+                JGString.prototype.toCharArray = function () {
+                    var array = new Array();
+                    for (var i = 0; i < this.value.length; i++) {
+                        array[i] = this.value.charAt(i);
+                    }
+                    return array;
+                };
+                ;
+                /**
+                 * Returns true if JGString value contains given string. Marks end of fluent style chain.
+                 * @param string
+                 * @return {boolean}
+                 */
+                JGString.prototype.contains = function (string) {
+                    if (this.value.indexOf(string) != -1) {
+                        return true;
+                    }
+                    else {
+                        return false;
+                    }
                 };
                 ;
                 return JGString;

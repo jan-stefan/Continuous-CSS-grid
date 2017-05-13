@@ -54,16 +54,6 @@ namespace de.jangehrmann.utils {
         };
 
         /**
-         * Returns the length of the JGString value.
-         * @returns {Number|number}
-         */
-        length(): JGString {
-            this.value = this.value.length.toString();
-            return this;
-        };
-
-
-        /**
          * Concatenates the JGString value with the given string.
          * @param string
          * @returns {*}
@@ -72,7 +62,6 @@ namespace de.jangehrmann.utils {
             this.value = (this.value + string);
             return this;
         };
-
 
         /**
          * Prepends given value to the beginning of the JGString value.
@@ -83,7 +72,6 @@ namespace de.jangehrmann.utils {
             this.value = (string + this.value);
             return this;
         };
-
 
         /**
          * Retunrs the JGString value wrapped around with given string.
@@ -99,7 +87,7 @@ namespace de.jangehrmann.utils {
          * Returns the length of the JGString value and marks the end of the fluent style chain.
          * @return {number}
          */
-        lengthGet(): number {
+        length(): number {
             return this.value.length;
         }
 
@@ -108,7 +96,7 @@ namespace de.jangehrmann.utils {
          * @param JGString
          * @returns {boolean}
          */
-        equalsGet(JGString): boolean {
+        equalsObject(JGString): boolean {
             return this === JGString;
         };
 
@@ -118,7 +106,7 @@ namespace de.jangehrmann.utils {
          * @param string
          * @returns {boolean}
          */
-        contentEqualsGet(string): boolean {
+        contentEquals(string): boolean {
             return (this.value == string);
         };
 
@@ -141,189 +129,52 @@ namespace de.jangehrmann.utils {
             return this;
         };
 
-        /*
 
-
-         /!**
-         * Retruns the number of the first occurency of the given character.
+        /**
+         * Retruns the number of the first occurency of the given character and left the fluent style chain.
          * Note that this function is case sensitive.
          * @param char
          * @returns {Number|number}
-         *!/
-         this
-         .
-         firstIndexOf = function (char) {
-         return this.value.indexOf(char);
-         };
+         */
+        firstIndexOf(char): number {
+            return this.value.indexOf(char);
+        };
 
-         /!**
-         * Retruns the number of the first occurency of the given character.
+        /**
+         * Retruns the number of the first occurency of the given character and left the fluent style chain.
          * Note that this function is case sensitive.
          * @param char
-         * @returns {Number|number}
-         *!/
-         this
-         .
-         lastIndexOf = function (char) {
-         return this.value.lastIndexOf(char);
-         };
+         * @return {Number|number}
+         */
+        lastIndexOf(char): number {
+            return this.value.lastIndexOf(char);
+        };
 
-         /!**
-         * Conerts JGString value to char array.
+        /**
+         * Converts JGString value to char array and left fluent style chain.
          * @return {Array}
-         *!/
-         this
-         .
-         toCharArray = function () {
-         var array = new Array();
+         */
+        toCharArray(): string[] {
+            var array = new Array();
 
-         for (i = 0; i < this.value.length; i++) {
-         array[i] = this.value.charAt(i);
-         }
-         return array;
-         };
+            for (var i = 0; i < this.value.length; i++) {
+                array[i] = this.value.charAt(i);
+            }
+            return array;
+        };
 
-         /!**
-         * Returns the unicode character code of given character.
-         * todo:implement
-         *!/
-         this
-         .
-         codePoint = function () {
 
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         contains = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         valueOf = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         endsWith = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         startsWith = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         format = function () {
-
-         };
-
-         /!**
-         *
-         * todo:implement
-         *!/
-         this
-         .
-         getChars = function (from, till) {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         indexOf = function (JGString) {
-
-         };
-
-         /!**
-         *
-         * todo:implement
-         *!/
-         this
-         .
-         matchesRegions = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         hashCode = function () {
-
-         };
-
-         /!**
-         * first occurency
-         * todo:implement
-         *!/
-         this
-         .
-         replace = function () {
-
-         };
-
-         /!**
-         * all occurencies
-         * todo:implement
-         *!/
-         this
-         .
-         replaceAll = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         split = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         subString = function () {
-
-         };
-
-         /!**
-         * todo:implement
-         *!/
-         this
-         .
-         trim = function () {
-
-         };*/
-
+        /**
+         * Returns true if JGString value contains given string. Marks end of fluent style chain.
+         * @param string
+         * @return {boolean}
+         */
+        contains(string: string): boolean {
+            if (this.value.indexOf(string) != -1) {
+                return true;
+            } else {
+                return false;
+            }
+        };
     }
-
-
 }
