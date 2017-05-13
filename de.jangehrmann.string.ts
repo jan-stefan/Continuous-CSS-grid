@@ -6,11 +6,11 @@
 namespace de.jangehrmann.utils {
 
     /**
-     * String object is a fluent style implementation of a string.
+     * JGString object is a fluent style implementation of a wrapper String class.
      * @param value
      * @constructor
      */
-    export class String {
+    export class JGString {
         value: string;
 
         /**
@@ -22,7 +22,7 @@ namespace de.jangehrmann.utils {
         }
 
         /**
-         * Sets the String value of this object.
+         * Sets the JGString value of this object.
          * @param string
          */
         set(string): void {
@@ -30,7 +30,7 @@ namespace de.jangehrmann.utils {
         };
 
         /**
-         * Returns the String value of this object.
+         * Returns the JGString value of this object.
          * @returns {*}
          */
         get(): string {
@@ -40,102 +40,108 @@ namespace de.jangehrmann.utils {
         /**
          * Sets the Object value to char at given position.
          * Starts counting at 0 on first character.
+         * Doesn't modifies the JGString value if there isn't any character at given position.
          * @param position
          */
-        charAt(position: number): String {
+        charAt(position: number): JGString {
             if (position < this.value.length) {
                 this.value = this.value.charAt(position);
                 return this;
-            }else {
-                console.log('ERROR: No character found at String position: ' + position);
+            } else {
+                console.error('ERROR: String doesn\'t contain any character at position ' + position + '.');
+                return this;
             }
         };
 
         /**
-         * Returns the length of the String value.
+         * Returns the length of the JGString value.
          * @returns {Number|number}
          */
-        length(): String {
+        length(): JGString {
             this.value = this.value.length.toString();
             return this;
         };
 
 
         /**
-         * Retruns the String value concatenated with the given string.
+         * Concatenates the JGString value with the given string.
          * @param string
          * @returns {*}
-         *!/
-         this
-         /*    .
-         append = function (string) {
-         return (this.value + string);
-         };
+         */
+        append(string): JGString {
+            this.value = (this.value + string);
+            return this;
+        };
 
-         /!**
-         * Returns String value prepended by given string.
+
+        /**
+         * Prepends given value to the beginning of the JGString value.
          * @param string
          * @returns {*}
-         *!/
-         this
-         .
-         prepend = function (string) {
-         return (string + this.value);
-         };
+         */
+        prepend(string): JGString {
+            this.value = (string + this.value);
+            return this;
+        };
 
-         /!**
-         * Retunrs the String value wrapped around with given string.
+
+        /**
+         * Retunrs the JGString value wrapped around with given string.
          * @param string
          * @returns {*}
-         *!/
-         this
-         .
-         wrapWith = function (string) {
-         return (string + this.value + string);
-         };
+         */
+        wrapWith(string): JGString {
+            this.value = (string + this.value + string);
+            return this;
+        };
 
-         /!**
-         * Checks if String equals the given object.
-         * @param String
+        /**
+         * Returns the length of the JGString value and marks the end of the fluent style chain.
+         * @return {number}
+         */
+        lengthGet(): number {
+            return this.value.length;
+        }
+
+        /**
+         * Checks if JGString equals the given object.
+         * @param JGString
          * @returns {boolean}
-         *!/
-         this
-         .
-         equals = function (String) {
-         return this === String;
-         };
+         */
+        equalsGet(JGString): boolean {
+            return this === JGString;
+        };
 
-         /!**
-         * Checks if the content is the same.
+
+        /**
+         * Checks if the content is the same and left the fluent style chain.
          * @param string
          * @returns {boolean}
-         *!/
-         this
-         .
-         contentEquals = function (string) {
-         return this.value.equals(string);
-         };
+         */
+        contentEqualsGet(string): boolean {
+            return (this.value == string);
+        };
 
-         /!**
-         * Returns String as a lower case representation.
+
+        /**
+         * Sets the JGString value to lower case representation.
          * @returns {string}
-         *!/
-         this
-         .
-         toLowerCase = function () {
-         return this.value.toLowerCase();
-         };
+         */
+        toLowerCase(): JGString {
+            this.value = this.value.toLowerCase();
+            return this;
+        };
 
-         /!**
-         * Returns String as a upper case representation.
+        /**
+         * Sets the JGString value to upper case representaion.
          * @returns {string}
-         *!/
-         this
-         .
-         toUpperCase = function () {
-         return this.value.toUpperCase();
-         };
+         */
+        toUpperCase(): JGString {
+            this.value = this.value.toUpperCase();
+            return this;
+        };
 
+        /*
 
 
          /!**
@@ -163,7 +169,7 @@ namespace de.jangehrmann.utils {
          };
 
          /!**
-         * Conerts String value to char array.
+         * Conerts JGString value to char array.
          * @return {Array}
          *!/
          this
@@ -247,7 +253,7 @@ namespace de.jangehrmann.utils {
          *!/
          this
          .
-         indexOf = function (String) {
+         indexOf = function (JGString) {
 
          };
 
@@ -321,13 +327,3 @@ namespace de.jangehrmann.utils {
 
 
 }
-
-
-var blabla = new de.jangehrmann.utils.String('eyoo');
-
-
-function printToScreen(content: string) {
-    document.getElementById('out').innerHTML = content;
-}
-
-printToScreen(blabla.charAt(4).get());
