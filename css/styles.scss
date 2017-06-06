@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  background-color: #3F3F3F;
+
+  overflow-x: hidden !important;
+
+  z-index: 1;
+}
+
+footer{
+  width: 100%;
+  height: 200px;
+  background-color: #313131;
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid;
+  border-color: #72AEE7;
+
+  z-index: 1;
+}
+
+.test{
+  background-color: red;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  vertical-align: middle;
+  position: absolute;
+
+  top: 50%;
+  left:50%;
+
+  transform: translate(-50%,-50%);
+
+margin-bottom: 250px;
+
+  width: auto;
+  width: 1200px;
+  height: 3000px;
+
+  z-index: 2;
+}
+
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: lightgreen;
+  }
+
+  .test{
+    width: 100%;
+  }
+}
