@@ -1,4 +1,4 @@
-body{
+body {
   margin: 0;
   background-color: #3F3F3F;
 
@@ -7,7 +7,7 @@ body{
   z-index: 1;
 }
 
-footer{
+footer {
   width: 100%;
   height: 200px;
   background-color: #313131;
@@ -19,21 +19,19 @@ footer{
   z-index: 1;
 }
 
-.test{
-  background-color: red;
+.test {
+  background-color: cornflowerblue;
 
   margin-left: auto;
   margin-right: auto;
 
-  vertical-align: middle;
   position: absolute;
+  left: 50%;
 
-  top: 50%;
-  left:50%;
+  transform: translatex(-50%);
 
-  transform: translate(-50%,-50%);
-
-margin-bottom: 250px;
+  margin-bottom: 250px;
+  margin-top: 50px;
 
   width: auto;
   width: 1200px;
@@ -47,7 +45,29 @@ margin-bottom: 250px;
     background-color: lightgreen;
   }
 
-  .test{
+  .test {
     width: 100%;
   }
+}
+
+@mixin absolute-center(){
+margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.modal {
+
+  @include absolute-center;
+
+  width: 400px;
+  height: 400px;
+
+  background-color: green;
+
+  z-index: 3;
 }
