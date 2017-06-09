@@ -1,69 +1,99 @@
-//this is just a test sheet. Not intended for later productive use.
-
 .container {
   width: 100%;
-  max-width: 1200px; //may be not the highest number. -> monitor sizes
+  max-width: 1920px; //may be not the highest number. -> monitor sizes
   min-width: 400px; //maybe choose another way to go fully responsive
-}
-
-/**
-Basic row to prevent columns to flow into each other.
- */
-.row:before,.row:after {
-  content: "";
-  width: 100%;
-  display: table;
-  clear: both;
-}
-
-
-[class*='col-']{
-  float: left;
-  min-height: 20px;
-  width: 16.66%;
-  border: inset 2px white;
-
-  padding: 12px;//gutter size
-  //margin: 5px;
-}
-
-.col-1{
-  width: 16.66%;
-}
-.col-2{
-  width: 33.33%;
-}
-.col-3{
-  width: 50%;
-}
-.col-4{
-  width: 66.664%;
-}
-.col-5{
-  width: 83.33%;
-}
-.col-6{
-  width: 100%;
 }
 
 .container * {
   box-sizing: border-box;
 }
 
-.color{
+//Basic row to prevent columns to flow into each other.
+
+.row:before, .row:after {
+  content: "";
+  width: 100%;
+  display: table;
+  clear: both;
+}
+
+//Common definitions
+
+[class*='col-'] {
+  float: left;
+  min-height: 20px;
+  width: 16.66%;
+  border: inset 2px white;
+
+  padding: 12px; //gutter size
+  //margin: 5px;
+}
+
+.col-1 {
+  width: 16.66%;
+}
+
+.col-2 {
+  width: 33.33%;
+}
+
+.col-3 {
+  width: 50%;
+}
+
+.col-4 {
+  width: 66.664%;
+}
+
+.col-5 {
+  width: 83.33%;
+}
+
+.col-6 {
+  width: 100%;
+}
+
+.color {
   background-color: #3F3F3F;
 }
 
-$smaller-than: "max-width:" ;
-$bigger-than:"min-width:";
+$smaller-than: "max-width";
+$bigger-than: "min-width";
 
-//reducer
-@media screen and($smaller-than 500px) { //wenn breite kleiner als 500px ist
-.col-1{
-  width: 20% ;
+//Costum definitions for costum Desktop screens.
+
+@media screen and($smaller-than: 1920px) {
+
 }
 
-  .col-1:last-child{
-    width: 100%;
-  }
+@media screen and($smaller-than: 1600px) {
 }
+
+@media screen and($smaller-than: 1536px) {
+}
+
+@media screen and($smaller-than: 1440px) {
+}
+
+@media screen and($smaller-than: 1366px) {
+}
+
+@media screen and($smaller-than: 1280px) {
+}
+
+@media screen and($smaller-than: 1024px) {
+}
+
+@media screen and($smaller-than: 768px) {
+}
+
+@media screen and($smaller-than: 640px) {
+}
+
+@media screen and($smaller-than: 480px) {
+}
+
+@media screen and($smaller-than: 320px) {
+}
+
+//Costum definitions for mobile screens.
