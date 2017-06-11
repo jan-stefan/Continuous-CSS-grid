@@ -1,7 +1,15 @@
+//only for testing. Delete later
+
+.color {
+  background-color: #72AEE7;
+}
+
+//only for testing. Delete later
+
 .container {
   width: 100%;
   max-width: 1920px; //may be not the highest number. -> monitor sizes
-  min-width: 400px; //maybe choose another way to go fully responsive
+  min-width: 320px; //maybe choose another way to go fully responsive
 }
 
 .container * {
@@ -26,35 +34,59 @@
   border: inset 2px white;
 
   padding: 12px; //gutter size
-  //margin: 5px;
+}
+
+//automatic guessing for rescale
+.col {
+  //change it using javascript?
 }
 
 .col-1 {
-  width: 16.66%;
+  width: 8.33%;
 }
 
 .col-2 {
-  width: 33.33%;
+  width: 16.66%;
 }
 
 .col-3 {
-  width: 50%;
+  width: 25%;
 }
 
 .col-4 {
-  width: 66.664%;
+  width: 33.33%;
 }
 
 .col-5 {
-  width: 83.33%;
+  width: 41.66%;
 }
 
 .col-6 {
-  width: 100%;
+  width: 50%;
 }
 
-.color {
-  background-color: #3F3F3F;
+.col-7 {
+  width: 58.33%;
+}
+
+.col-8 {
+  width: 66.66%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33%;
+}
+
+.col-11 {
+  width: 91.66%;
+}
+
+.col-12 {
+  width: 100%;
 }
 
 $smaller-than: "max-width";
@@ -62,38 +94,310 @@ $bigger-than: "min-width";
 
 //Costum definitions for costum Desktop screens.
 
-@media screen and($smaller-than: 1920px) {
-
-}
-
-@media screen and($smaller-than: 1600px) {
-}
-
-@media screen and($smaller-than: 1536px) {
-}
-
-@media screen and($smaller-than: 1440px) {
-}
-
-@media screen and($smaller-than: 1366px) {
-}
-
+//10 or less
 @media screen and($smaller-than: 1280px) {
+  .col-1 {
+    width: 8.33%;
+  }
+
+  .col-2{
+    width: 16.66%;
+  }
+
+  .col-3{
+    width: 25%;
+  }
+
+  .col-4{
+    width: 33.33%;
+  }
+
+  .col-5{
+    width: 50%;
+  }
+
+  .col-6{
+    width: 66.66%;
+  }
+
+  .col-7{
+    width: 75%;
+  }
+
+  .col-8{
+    width: 83.33%;
+  }
+
+  .col-9{
+    width: 91.66%;
+  }
+
+  .col-10{
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
 }
 
+//8 or less
 @media screen and($smaller-than: 1024px) {
+
+  .col-1{
+    width: 8.33%;
+  }
+
+  .col-2{
+    width: 16.66%;
+  }
+
+  .col-3{
+    width: 25%;
+  }
+
+  .col-4{
+    width: 50%;
+  }
+
+  .col-5{
+    width: 75%;
+  }
+
+  .col-6{
+    width: 83.33%;
+  }
+
+  .col-7 {
+    width: 91.66%;
+  }
+
+  .col-8 {
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
 }
 
+//6 or less
 @media screen and($smaller-than: 768px) {
+  .col-1 {
+    width: 16.66%;
+  }
+
+  .col-2{
+    width: 33.33%;
+  }
+
+  .col-3{
+    width: 50%;
+  }
+
+  .col-4{
+    width: 66.66%;
+  }
+
+  .col-5{
+    width: 91.66%;
+  }
+
+  .col-6{
+    width: 100%;
+  }
+
+  .col-7{
+    width: 100%;
+  }
+
+  .col-8{
+    width: 100%;
+  }
+
+  .col-9{
+    width: 100%;
+  }
+
+  .col-10{
+    width: 100%;
+  }
+
+  .col-11{
+    width: 100%;
+  }
+
+  .col-12{
+    width: 100%;
+  }
+
 }
 
+//4 or less
 @media screen and($smaller-than: 640px) {
+  .col-1 {
+    width: 25%;
+  }
+
+  .col-2 {
+    width: 50%;
+  }
+
+  .col-3 {
+    width: 75%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-5 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+
+  .col-8 {
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
 }
 
+//2 or less
 @media screen and($smaller-than: 480px) {
+  .col-1 {
+    width: 50%;
+  }
+
+  .col-2 {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-5 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+
+  .col-8 {
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
 }
 
+//mobile has all col types on 100%
 @media screen and($smaller-than: 320px) {
-}
+  .col-1 {
+    width: 100%;
+  }
 
-//Costum definitions for mobile screens.
+  .col-2 {
+    width: 100%;
+  }
+
+  .col-3 {
+    width: 100%;
+  }
+
+  .col-4 {
+    width: 100%;
+  }
+
+  .col-5 {
+    width: 100%;
+  }
+
+  .col-6 {
+    width: 100%;
+  }
+
+  .col-7 {
+    width: 100%;
+  }
+
+  .col-8 {
+    width: 100%;
+  }
+
+  .col-9 {
+    width: 100%;
+  }
+
+  .col-10 {
+    width: 100%;
+  }
+
+  .col-11 {
+    width: 100%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
+}
