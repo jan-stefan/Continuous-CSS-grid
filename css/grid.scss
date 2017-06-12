@@ -35,14 +35,15 @@
 }
 
 //Common definitions
+.row {
+  [class*='col-'] {
+    float: left;
+    min-height: 20px;
+    width: 16.66%;
+    border: inset 2px white;
 
-[class*='col-'] {
-  float: left;
-  min-height: 20px;
-  width: 16.66%;
-  border: inset 2px white;
-
-  padding: 12px; //gutter size
+    padding: 12px; //gutter size
+  }
 }
 
 .row {
