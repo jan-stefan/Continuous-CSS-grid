@@ -9,66 +9,72 @@
 
 <div class="fluid-container">
     <div class="row">
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-        <div class="col-1 color">
-            test
-        </div>
-    </div>
-</div>
-
-
-<div class="fluid-container">
-    <div class="row">
-        <div class="col-2 color">
-            test
-        </div>
         <div class="col-4 color">
             test
         </div>
         <div class="col-2 color">
             test
         </div>
+
         <div class="col-2 color">
+            test
+        </div>
+        <div class="col-4 color">
+            test
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-4 color">
             test
         </div>
         <div class="col-2 color">
             test
         </div>
 
+        <div class="col-2 color">
+            test
+        </div>
+        <div class="col-4 color">
+            test
+        </div>
     </div>
 </div>
 
 </body>
+
+<script>
+
+
+    var size = document.getElementsByClassName('row').length;
+
+    var array = [];
+
+    for (var i = 0; i < size; i++) {
+
+        array.push(document.getElementsByClassName('row').item(i).childNodes);
+
+    }
+
+    console.log(array[0].item(3).attributes.item(0));
+
+
+    function fillRest(rowSize) {
+
+
+        var counter = 0;
+
+        for (var i = 0; i < (rowSize - 1); i++) {
+            for (var j = 1; j < rowSize; j++) {
+                //get row size
+                //add
+
+                //    check if row size smaller than two following cols
+                //reszize first col
+
+            }
+        }
+    }
+
+</script>
 </html>
