@@ -8,7 +8,7 @@
 
 .fluid-container {
   width: 100%;
-  min-width: 320px;
+  min-width: 240px;
 
   display: flex;
   flex-direction: row;
@@ -31,10 +31,21 @@
   align-items: stretch;
 }
 
+
 .container * {
   box-sizing: border-box;
 }
 
+//in case the user want to organize his grid in rows. Not automatic row creating columns.
+//row can be used but doesn't have to be.
+.row{
+  width: 100%;
+  clear: both;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
 //Common definitions
 
 [class*='col-'] {
@@ -43,7 +54,6 @@
   width: 16.66%;
   border: inset 2px white;
   flex-grow: 1;
-
   padding: 12px; //gutter size
 }
 
@@ -95,13 +105,10 @@
   width: 100%;
 }
 
-$smaller-than: "max-width";
-$bigger-than: "min-width";
-
 //Costum definitions for costum Desktop screens.
 
 //10 or less
-@media screen and($smaller-than: 1280px) {
+@media screen and(max-width: 1280px) {
 
   [class*='col-'] {
     width: 100%;
@@ -145,7 +152,7 @@ $bigger-than: "min-width";
 }
 
 //8 or less
-@media screen and($smaller-than: 1024px) {
+@media screen and(max-width: 1024px) {
 
   [class*='col-'] {
     width: 100%;
@@ -181,7 +188,7 @@ $bigger-than: "min-width";
 }
 
 //6 or less
-@media screen and($smaller-than: 768px) {
+@media screen and(max-width: 768px) {
 
   [class*='col-'] {
     width: 100%;
@@ -208,7 +215,7 @@ $bigger-than: "min-width";
 }
 
 //4 or less
-@media screen and($smaller-than: 640px) {
+@media screen and(max-width: 640px) {
 
   [class*='col-'] {
     width: 100%;
@@ -228,7 +235,7 @@ $bigger-than: "min-width";
 }
 
 //2 or less
-@media screen and($smaller-than: 480px) {
+@media screen and(max-width: 480px) {
 
   [class*='col-'] {
     width: 100%;
@@ -239,7 +246,7 @@ $bigger-than: "min-width";
 }
 
 //mobile has all col types on 100%
-@media screen and($smaller-than: 320px) {
+@media screen and(max-width: 320px) {
 
   [class*='col-'] {
     width: 100%;
