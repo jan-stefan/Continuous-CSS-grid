@@ -2,21 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>parallax</title>
-
-   <link href="css/flexgrid.css" type="text/css" rel="stylesheet">
+    <title>GridTest</title>
+    <link href="css/flexgrid.css" type="text/css" rel="stylesheet">
 </head>
 <body>
 
-<div class="row">
-    <div class="col">test</div>
-    <div class="col">test</div>
-    <div class="col">test</div>
+<div class="fluid-container">
+
+        <div class="col-4 color">
+            test
+        </div>
+
+        <div class="col-4 color">
+            test
+        </div>
+        <div class="col-4 color">
+            test
+        </div>
+
+
+
+        <div class="col-4 color">
+            test
+        </div>
+        <div class="col-2 color">
+            test
+        </div>
+
+        <div class="col-1 color">
+            test
+        </div>
+        <div class="col-3 color">
+            test
+        </div>
+
 </div>
 
 
-<script>
-    console.log(document.getElementsByClassName('row').item(0).attributes);
-</script>
+<div id="out"></div>
+
 </body>
+
 </html>
