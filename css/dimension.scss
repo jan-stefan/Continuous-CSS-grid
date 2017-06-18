@@ -14,16 +14,20 @@
   margin-right: auto;
 }
 
-@mixin background {
+@mixin background-layer {
   z-index: 1;
 }
 
-@mixin midground {
+@mixin midground-layer {
   z-index: 2;
 }
 
-@mixin foreground {
+@mixin foreground-layer {
   z-index: 3;
+}
+
+@mixin block-layer{
+  z-index: 4;
 }
 
 @mixin sticky-bottom {
