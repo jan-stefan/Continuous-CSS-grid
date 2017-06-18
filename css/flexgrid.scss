@@ -1,13 +1,13 @@
 .fluid-container {
   width: 100%;
   min-width: 240px;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
+//may not need this anymore with flexbox
 .fluid-container * {
   box-sizing: border-box;
 }
@@ -16,13 +16,11 @@
   width: 100%;
   max-width: 1600px; //may be not the highest number. -> monitor sizes
   min-width: 320px; //maybe choose another way to go fully responsive
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: stretch;
 }
-
 
 .container * {
   box-sizing: border-box;

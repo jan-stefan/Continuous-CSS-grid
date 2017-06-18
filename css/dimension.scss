@@ -1,0 +1,37 @@
+@mixin center-xy-absolute {
+  margin-left: auto;
+  margin-right: auto;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: green;
+}
+
+@mixin center-x-relative {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin background {
+  z-index: 1;
+}
+
+@mixin midground {
+  z-index: 2;
+}
+
+@mixin foreground {
+  z-index: 3;
+}
+
+@mixin sticky-bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+@mixin sticky-top {
+  position: absolute;
+  top: 0;
+}
