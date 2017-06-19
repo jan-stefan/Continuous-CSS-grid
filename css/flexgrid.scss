@@ -28,7 +28,7 @@
 
 //in case the user want to organize his grid in rows. Not automatic row creating columns.
 //row can be used but doesn't have to be.
-.row{
+.row {
   width: 100%;
   clear: both;
   display: flex;
@@ -36,6 +36,7 @@
   flex-wrap: wrap;
   align-items: stretch;
 }
+
 //Common definitions
 
 [class*='col-'] {
@@ -43,6 +44,10 @@
   min-height: 20px;
   width: 16.66%;
   flex-grow: 1;
+}
+
+.col {
+  width: 8.33%;
 }
 
 .col-1 {
@@ -102,6 +107,10 @@
     width: 100%;
   }
 
+  .col {
+    width: 8.33%;
+  }
+
   .col-1 {
     width: 8.33%;
   }
@@ -146,6 +155,10 @@
     width: 100%;
   }
 
+  .col {
+    width: 8.33%;
+  }
+
   .col-1 {
     width: 8.33%;
   }
@@ -181,6 +194,11 @@
   [class*='col-'] {
     width: 100%;
   }
+
+  .col {
+    width: 16.66%;
+  }
+
   .col-1 {
     width: 16.66%;
   }
@@ -209,6 +227,10 @@
     width: 100%;
   }
 
+  .col {
+    width: 25%;
+  }
+
   .col-1 {
     width: 25%;
   }
@@ -228,6 +250,11 @@
   [class*='col-'] {
     width: 100%;
   }
+
+  .col {
+    width: 50%;
+  }
+
   .col-1 {
     width: 50%;
   }
