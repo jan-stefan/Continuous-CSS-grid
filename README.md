@@ -1,4 +1,4 @@
-# Continous
+# Continuous
 
 Continous is a css library which helps to solve problems everyone have sometimes.
 
