@@ -1,13 +1,5 @@
 # Continuous
 
-Continous is a css library which helps to solve problems everyone have sometimes.
-
-Currently it supports:
-
-1. Responsive grid system
-
-## 1. The Grid
-
 The grid system is based on 12 column's like them in twitter bootstrap. It combines the usage of flexboxes and relative sizes
 to archieve the most responsive goal ever seen in a pure css grid.
 
