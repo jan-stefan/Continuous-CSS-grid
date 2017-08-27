@@ -22,9 +22,9 @@ Grid will rescale elements based on 7 different screen width's.
 ```html
 <div class="fluid-container"> <!-- Grid rules will only apply inside this container -->
   <div class="row">
-    <div class="col-4 color">text</div> <!-- one row has to fit maximum col size of 12 -->
-    <div class="col-4 color">text</div>
-    <div class="col-4 color">text</div>
+    <div class="col-4">text</div> <!-- one row has to fit maximum col size of 12 -->
+    <div class="col-4">text</div>
+    <div class="col-4">text</div>
   </div>
 </div>
 ```
@@ -34,9 +34,9 @@ Throw them away.
 
 ```html
 <div class="fluid-container"> <!-- Grid rules will only apply inside this container -->
-   <div class="col-4 color">text</div> <!-- one row has to fit maximum col size of 12 -->
-   <div class="col-4 color">text</div>
-   <div class="col-4 color">text</div>
+   <div class="col-4">text</div> <!-- one row has to fit maximum col size of 12 -->
+   <div class="col-4">text</div>
+   <div class="col-4">text</div>
 </div>
 ```
 Now everytime your columns reach the size of 12 it will automatically create a row and resize overlapping elements to an
